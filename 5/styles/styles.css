@@ -41,6 +41,7 @@ body {
 }
 
 .page-header {
+  color: inherit;
   background-color: #FFFFFF;
 }
 
@@ -56,9 +57,10 @@ body {
 
 /* INDEX PAGE */
 .promo {
+  background-color: #466887;
   background-image: url("../images/promo-background.jpg");
   background-repeat: no-repeat;
-  background-color: #466887;
+  background-size: 100% auto;
 }
 .slogan {
   text-align: center;
@@ -78,12 +80,22 @@ body {
   text-align: center;
 }
 
-.advantages-item:nth-child(even) {
-  background-color:#83B3D31F;
+.advantages-item {
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #83B3D31F;
 }
 
-.advantages-item:nth-child(odd) {
-  background-color:#83B3D333;
+.additional-advantages-item:nth-child(2) {
+  background-color: #FFFFFF;
+}
+
+.advantages-item:nth-child(5) {
+  background-color: #83B3D333;
+}
+
+.advantages-item:nth-child(5) {
+  background-color: #83B3D333;
 }
 
 .advantages-item-banner {
@@ -116,10 +128,11 @@ body {
 
 .subscription {
   text-align: center;
+  color: #FFFFFF;
+  background-color: #466887;
   background-image: url("../images/subscription-background.jpg");
   background-repeat: no-repeat;
-  background-color: #466887;
-  color: #FFFFFF;
+  background-size: 100% auto;
 }
 
 .subscription-title {
@@ -136,9 +149,10 @@ body {
 
 /* CATALOG PAGE */
 .catalog-filter {
+  background-color: #466887;
   background-image: url("../images/catalog/catalog-background.jpg");
   background-repeat: no-repeat;
-  background-color: #466887;
+  background-size: 100% auto;
 }
 .inner-header-title {
   font-size: 60px;
