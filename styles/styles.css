@@ -57,9 +57,10 @@ body {
 
 /* INDEX PAGE */
 .promo {
+  background-color: #466887;
   background-image: url("../images/promo-background.jpg");
   background-repeat: no-repeat;
-  background-color: #466887;
+  background-size: 100% auto;
 }
 .slogan {
   text-align: center;
@@ -127,10 +128,11 @@ body {
 
 .subscription {
   text-align: center;
+  color: #FFFFFF;
+  background-color: #466887;
   background-image: url("../images/subscription-background.jpg");
   background-repeat: no-repeat;
-  background-color: #466887;
-  color: #FFFFFF;
+  background-size: 100% auto;
 }
 
 .subscription-title {
@@ -147,9 +149,10 @@ body {
 
 /* CATALOG PAGE */
 .catalog-filter {
+  background-color: #466887;
   background-image: url("../images/catalog/catalog-background.jpg");
   background-repeat: no-repeat;
-  background-color: #466887;
+  background-size: 100% auto;
 }
 .inner-header-title {
   font-size: 60px;
