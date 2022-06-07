@@ -121,6 +121,7 @@ body {
   font-size: 22px;
   line-height: 26px;
 }
+
 /* CATALOG PAGE */
 .inner-header-title {
   font-size: 60px;
@@ -128,6 +129,7 @@ body {
   line-height: 78px;
   color: #FFFFFF;
 }
+
 .breadcrumbs{
   color: #FFFFFF;
 }
@@ -173,12 +175,13 @@ body {
   font-size: 20px;
   line-height: 36px;
   color: #FFFFFF;
+  background-color: #82B3D3;
+  text-decoration: none;
 }
 
 .pagination-current {
-  font-size: 20px;
-  line-height: 36px;
   color: #000000;
+  background-color: #F2F2F2;
 }
 
 .result-numbers-text {
@@ -201,6 +204,7 @@ body {
   line-height: 26px;
   color:#333333;
 }
+
 /* COMMON STYLES */
 .footer-phone {
   font-size: 40px;
