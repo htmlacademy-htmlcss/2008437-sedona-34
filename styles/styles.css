@@ -41,6 +41,7 @@ body {
 }
 
 .page-header {
+  color: inherit;
   background-color: #FFFFFF;
 }
 
@@ -78,12 +79,22 @@ body {
   text-align: center;
 }
 
-.advantages-item:nth-child(even) {
-  background-color:#83B3D31F;
+.advantages-item {
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #83B3D31F;
 }
 
-.advantages-item:nth-child(odd) {
-  background-color:#83B3D333;
+.additional-advantages-item:nth-child(2) {
+  background-color: #FFFFFF;
+}
+
+.advantages-item:nth-child(5) {
+  background-color: #83B3D333;
+}
+
+.advantages-item:nth-child(5) {
+  background-color: #83B3D333;
 }
 
 .advantages-item-banner {
