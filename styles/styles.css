@@ -126,6 +126,10 @@ body {
   color: #333333;
 }
 
+.advantages-description-white {
+  color: #FFFFFF;
+}
+
 .hotel-search {
   text-align: center;
 }
@@ -140,6 +144,7 @@ body {
 .hotel-search-text {
   font-size: 22px;
   line-height: 26px;
+  color: #333333;
 }
 
 .search-button {
