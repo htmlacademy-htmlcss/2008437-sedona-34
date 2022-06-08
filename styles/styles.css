@@ -36,7 +36,20 @@ body {
   border-radius: 4px;
 }
 
-.button-second {
+
+.button-big {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.button-small {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.button-blue {
   background-color: #82B3D3;
 }
 
@@ -74,6 +87,7 @@ body {
   text-align: center;
   font-size: 22px;
   line-height: 26px;
+  color: #333333;
 }
 
 .advantages-list {
@@ -81,8 +95,6 @@ body {
 }
 
 .advantages-item {
-  font-size: 18px;
-  line-height: 21px;
   background-color: #83B3D31F;
 }
 
@@ -110,6 +122,10 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-description {
+  color: #333333;
+}
+
 .hotel-search {
   text-align: center;
 }
@@ -124,6 +140,12 @@ body {
 .hotel-search-text {
   font-size: 22px;
   line-height: 26px;
+}
+
+.search-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
 }
 
 .subscription {
@@ -147,6 +169,11 @@ body {
   line-height: 26px;
 }
 
+.subscription-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
 /* CATALOG PAGE */
 .catalog-filter {
   background-color: #466887;
@@ -181,6 +208,16 @@ body {
 .select-control option {
   color: #333333;
 }
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.control {
+  color: #FFFFFF;
+}
 
 .hotel-card-title {
   font-size: 24px;
@@ -203,10 +240,6 @@ body {
 }
 
 .pagination-link {
-  font-size: 20px;
-  line-height: 36px;
-  color: #FFFFFF;
-  background-color: #82B3D3;
   text-decoration: none;
 }
 
