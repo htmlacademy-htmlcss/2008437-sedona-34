@@ -14,15 +14,7 @@
   font-display: swap;
 }
 
-body {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
-/* COMMON STYLES */
+/* BUTTONS */
 .button {
   font-family: inherit;
   font-size: 16px;
@@ -53,12 +45,61 @@ body {
   background-color: #82B3D3;
 }
 
+/* BASIC STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* HEADER */
 .page-header {
   color: inherit;
   background-color: #FFFFFF;
 }
 
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.page-header-logo {
+  margin-right: 30px;
+}
+
+.navigation-list {
+  width: 490px;
+  padding 0;
+  margin: 0;
+}
+
+.navigation-user {
+  max-width: 265px;
+  margin-left: auto;
+}
+
 .navigation-link {
+  margin: 0;
+  padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 26px;
@@ -69,13 +110,26 @@ body {
 }
 
 /* INDEX PAGE */
+.main-index {
+  background-color: #FFFFFF;
+}
+
 .promo {
   background-color: #466887;
   background-image: url("../images/promo-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  text-align: center;
 }
+
+.advantages {
+  margin: 0 auto;
+}
+
 .slogan {
+  width: 630px;
+  margin: 0 auto;
+  margin-bottom: 31px;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -84,6 +138,8 @@ body {
 }
 
 .slogan-description {
+  width: 654px;
+  margin: 0 auto;
   text-align: center;
   font-size: 22px;
   line-height: 26px;
@@ -91,11 +147,18 @@ body {
 }
 
 .advantages-list {
+  display: flex;
   text-align: center;
+  padding: 0;
 }
 
 .advantages-item {
+  width: 400px;
   background-color: #83B3D31F;
+}
+
+.advantages-item-banner {
+  width: 1200px;
 }
 
 .additional-advantages-item:nth-child(2) {
