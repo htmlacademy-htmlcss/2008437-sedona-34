@@ -46,8 +46,14 @@
 }
 
 /* BASIC STYLES */
+html {
+  height: 100%;
+  background-color:#ffffff;
+}
+
 body {
-  margin: 0;
+  width: 1280px;
+  margin: 0 auto;
   padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -58,7 +64,11 @@ body {
 
 .page-container {
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -70,8 +80,10 @@ body {
   white-space: nowrap;
   width: 1px;
 }
+
 /* HEADER */
 .page-header {
+  min-height: 70px;
   color: inherit;
   background-color: #FFFFFF;
 }
@@ -88,7 +100,7 @@ body {
 
 .navigation-list {
   width: 490px;
-  padding 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -114,7 +126,12 @@ body {
   background-color: #FFFFFF;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .promo {
+  height:485px;
   background-color: #466887;
   background-image: url("../images/promo-background.jpg");
   background-repeat: no-repeat;
@@ -127,6 +144,7 @@ body {
 }
 
 .advantages {
+  min-height: 1817px;
   margin: 0 auto;
 }
 
@@ -153,24 +171,29 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
   padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
 }
 
 .advantages-item {
   width: 400px;
-  height: 384px;
+  min-height: 384px;
   background-color: #83B3D31F;
 }
 
 .advantages-item-banner {
-
+  width: 1200px;
+  height: 384px;
+  display: flex;
 }
 
 .additional-advantages {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  list-style: none;
 }
 
 .additional-advantages-item:nth-child(2) {
@@ -211,6 +234,7 @@ body {
 }
 
 .hotel-search {
+  min-height: 417px;
   text-align: center;
 }
 
@@ -234,6 +258,7 @@ body {
 }
 
 .subscription {
+  min-height: 411px;
   text-align: center;
   color: #FFFFFF;
   background-color: #466887;
@@ -267,24 +292,26 @@ body {
 /* FOOTER */
 .page-footer-container {
   display: flex;
+  justify-content:space-between;
   width: 1060px;
+  min-height: 120px;
   margin: 0 auto;
 }
 
 .footer-social {
   width: 142px;
-  margin-right: 265px;
 }
 
 .footer-social-list {
   padding: 0;
+  list-style: none;
 }
 
 .footer-phone {
   display: block;
-  width: 331px;
-  margin-right: 235px;
+  width: 333px;
 }
+
 /* CATALOG PAGE */
 .catalog-filter {
   background-color: #466887;
