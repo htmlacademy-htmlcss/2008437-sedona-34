@@ -518,12 +518,14 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin-bottom: 29px;
 }
 
 .subscription-catalog-text {
   font-size: 22px;
   line-height: 26px;
   color:#333333;
+  margin-bottom: 46px;
 }
 
 /* COMMON STYLES */
