@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -14,36 +15,6 @@
   font-display: swap;
 }
 
-/* BUTTONS */
-.button {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #ffffff;
-  background-color: #756157;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 4px;
-}
-
-
-.button-big {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
-}
-
-.button-small {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-}
-
-.button-blue {
-  background-color: #82B3D3;
-}
 
 /* BASIC STYLES */
 html {
@@ -62,15 +33,6 @@ body {
   color: #000000;
 }
 
-.page-container {
-  width: 1200px;
-  min-height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -80,6 +42,47 @@ body {
   white-space: nowrap;
   width: 1px;
 }
+
+.page-container {
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* COMMON BUTTONS STYLES */
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.button-big {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.button-small {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
 
 /* HEADER */
 .page-header {
@@ -99,19 +102,16 @@ body {
 }
 
 .navigation-list {
-  width: 490px;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
-}
-
-.navigation-user {
-  max-width: 265px;
-  margin-left: auto;
+  list-style-type: none;
 }
 
 .navigation-link {
-  margin: 0;
-  padding: 0;
+  display: block;
+  padding: 20px 17px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 26px;
@@ -119,6 +119,21 @@ body {
   text-align:center;
   color: inherit;
   text-decoration: none;
+}
+
+.navigation-user {
+  max-width: 265px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+}
+/* Temporary solution for the button */
+.button-navigation-user {
+  display: block;
+  margin-top: 20px;
 }
 
 /* INDEX PAGE */
@@ -132,6 +147,8 @@ body {
 
 .promo {
   height:485px;
+  padding-top: 51px;
+  box-sizing: border-box;
   background-color: #466887;
   background-image: url("../images/promo-background.jpg");
   background-repeat: no-repeat;
@@ -144,7 +161,7 @@ body {
 }
 
 .advantages {
-  min-height: 1817px;
+  padding-top: 63px;
   margin: 0 auto;
 }
 
@@ -162,6 +179,7 @@ body {
 .slogan-description {
   width: 654px;
   margin: 0 auto;
+  margin-bottom: 90px;
   text-align: center;
   font-size: 22px;
   line-height: 26px;
