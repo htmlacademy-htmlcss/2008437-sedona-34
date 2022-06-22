@@ -14,7 +14,11 @@
   src: url("fonts/ptsans-700.woff2") format(woff2);
   font-display: swap;
 }
-
+/* RESETTING BASIC STYLES */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
 
 /* BASIC STYLES */
 html {
@@ -50,6 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
 }
 
 
@@ -248,11 +253,12 @@ body {
 }
 
 .hotel-search {
-  min-height: 417px;
   text-align: center;
+  padding-top: 91px;
 }
 
 .hotel-search-title {
+  margin-bottom: 29px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -260,19 +266,23 @@ body {
 }
 
 .hotel-search-text {
+  margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
-.search-button {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
+.button-search {
+  display: block;
+  width: 574px;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 93px;
 }
 
 .subscription {
-  min-height: 411px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   text-align: center;
   color: #FFFFFF;
   background-color: #466887;
@@ -282,6 +292,7 @@ body {
 }
 
 .subscription-title {
+  margin-bottom: 29px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -289,6 +300,7 @@ body {
 }
 
 .subscription-text {
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 26px;
 }
@@ -297,33 +309,35 @@ body {
   color: rgba(0, 0, 0, 0.6)
 }
 
-.subscription-button {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
-}
-
 /* FOOTER */
 .page-footer-container {
   display: flex;
   justify-content:space-between;
   width: 1060px;
-  min-height: 120px;
   margin: 0 auto;
+  padding: 40px 0 30px;
 }
 
 .footer-social {
-  width: 142px;
+  max-width: 142px;
 }
 
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.footer-social-item {
+  width: 47px;
+  height: 40px;
+}
+
 .footer-phone {
   display: block;
-  width: 333px;
+
 }
 
 /* CATALOG PAGE */
