@@ -400,6 +400,12 @@ background-color: rgba(130, 179, 211, 1);
   margin: 0 auto;
 }
 
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .catalog-filter-form {
   display: flex;
 }
