@@ -370,8 +370,12 @@ background-color: rgba(130, 179, 211, 1);
 
 .footer-phone {
   display: block;
-
+  font-size: 40px;
+  line-height: 40px;
+  color:#000000;
+  text-decoration: none;
 }
+
 
 /* CATALOG PAGE */
 .header-catalog-wrapper {
@@ -386,6 +390,11 @@ background-color: rgba(130, 179, 211, 1);
   width: 1060px;
   margin: 0 auto;
 }
+
+.inner-header-title {
+  margin: 0;
+}
+
 .catalog-filter {
   width: 1060px;
   margin: 0 auto;
@@ -403,20 +412,29 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .inner-header-title {
+  margin-bottom: 10px;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
   color: #FFFFFF;
 }
 
-.breadcrumbs{
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
   color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
   color: inherit;
   text-decoration: none;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .catalog-search-result {
@@ -432,6 +450,7 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .search-result-title {
+  margin: 0;
   margin-right: 191px;
   font-size: 30px;
   font-weight: 700;
@@ -451,6 +470,8 @@ background-color: rgba(130, 179, 211, 1);
 
 .view-type {
   display: flex;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   min-width: 160px;
   height: 48px;
@@ -501,6 +522,9 @@ background-color: rgba(130, 179, 211, 1);
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .pagination-item:not(:last-child) {
@@ -550,6 +574,7 @@ background-color: rgba(130, 179, 211, 1);
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
   margin-bottom: 29px;
 }
 
@@ -558,12 +583,4 @@ background-color: rgba(130, 179, 211, 1);
   line-height: 26px;
   color:#333333;
   margin-bottom: 46px;
-}
-
-/* COMMON STYLES */
-.footer-phone {
-  font-size: 40px;
-  line-height: 40px;
-  color:#000000;
-  text-decoration: none;
 }
