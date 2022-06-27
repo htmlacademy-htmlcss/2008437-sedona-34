@@ -29,6 +29,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 400;
   background-color: #F2F2F2;
   color: #000000;
 }
@@ -56,6 +57,8 @@ body {
 
 /* COMMON BUTTONS STYLES */
 .button {
+  display: inline-block;
+  padding: 9px 15px 8px 15px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -65,7 +68,9 @@ body {
   background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .button-big {
@@ -74,20 +79,12 @@ body {
   line-height: 36px;
 }
 
-.button-small {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-}
-
 .button-blue {
   background-color: #82B3D3;
 }
 
-
 /* HEADER */
 .page-header {
-  min-height: 70px;
   color: inherit;
   background-color: #FFFFFF;
 }
@@ -98,8 +95,11 @@ body {
   margin: 0 auto;
 }
 
-.page-header-logo {
+.page-header-logo-link {
+  display: block;
+  position: absolute;
   margin-right: 30px;
+  z-index: 1;
 }
 
 .navigation-list {
@@ -108,6 +108,10 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.page-header-logo-link + .navigation-list {
+  padding-left: 169px;
 }
 
 .navigation-link {
@@ -123,6 +127,9 @@ body {
 }
 
 .navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   max-width: 265px;
   margin-left: auto;
 }
@@ -131,10 +138,10 @@ body {
   min-width: 18px;
   min-height: 18px;
 }
-/* Temporary solution for the button */
+
 .button-navigation-user {
   display: block;
-  margin-top: 20px;
+  min-width: 130px;
 }
 
 /* INDEX PAGE */
@@ -200,6 +207,10 @@ body {
   padding-top: 92px;
 }
 
+.advantages-item-low {
+  padding-top: 103px;
+}
+
 div.advantages-item {
 background-color: rgba(130, 179, 211, 1);
 }
@@ -214,6 +225,7 @@ background-color: rgba(130, 179, 211, 1);
   display: flex;
   flex-wrap: wrap;
 }
+
 .advantages-item-wrapper {
   width: 230px;
   margin: 0 auto;
@@ -275,6 +287,10 @@ background-color: rgba(130, 179, 211, 1);
   text-transform: uppercase;
 }
 
+.advantages-number {
+  margin-bottom: 30px;
+}
+
 .advantages-description {
   color: #333333;
   margin-bottom: 30px;
@@ -299,7 +315,9 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .hotel-search-text {
+  margin: 0 auto;
   margin-bottom: 56px;
+  padding: 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -307,10 +325,12 @@ background-color: rgba(130, 179, 211, 1);
 
 .button-search {
   display: block;
+  box-sizing: border-box;
   width: 574px;
   height: 60px;
   margin: 0 auto;
   margin-bottom: 93px;
+  padding: 12px 15px;
 }
 
 .subscription {
@@ -325,6 +345,7 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .subscription-title {
+  margin: 0;
   margin-bottom: 29px;
   font-size: 30px;
   font-weight: 700;
@@ -333,7 +354,7 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .subscription-text {
-  margin-bottom: 46px;
+  margin-bottom: 44px;
   font-size: 22px;
   line-height: 26px;
 }
@@ -342,10 +363,18 @@ background-color: rgba(130, 179, 211, 1);
   color: rgba(0, 0, 0, 0.6)
 }
 
+.button-subscribe {
+  width: 200px;
+  min-height: 60px;
+  padding: 12px 15px;
+}
+
+
 /* FOOTER */
 .page-footer-container {
   display: flex;
   justify-content:space-between;
+  align-items: center;
   width: 1060px;
   margin: 0 auto;
   padding: 40px 0 30px;
@@ -368,6 +397,11 @@ background-color: rgba(130, 179, 211, 1);
   height: 40px;
 }
 
+.footer-phone-wrapper {
+  padding: 5px 195px;
+  margin: 0;
+}
+
 .footer-phone {
   display: block;
   font-size: 40px;
@@ -379,6 +413,8 @@ background-color: rgba(130, 179, 211, 1);
 
 /* CATALOG PAGE */
 .header-catalog-wrapper {
+  box-sizing: border-box;
+  min-height: 402px;
   padding: 35px 0 70px;
   background-color: #466887;
   background-image: url("../images/catalog/catalog-background.jpg");
@@ -444,7 +480,7 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .catalog-search-result {
-  padding-top: 50px;
+  padding-top: 55px;
 }
 
 .sort-order-menu {
@@ -458,6 +494,7 @@ background-color: rgba(130, 179, 211, 1);
 .search-result-title {
   margin: 0;
   margin-right: 191px;
+  padding-top: 9px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -502,8 +539,8 @@ background-color: rgba(130, 179, 211, 1);
 .hotel-card-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  grid-template-rows: auto auto auto auto auto;
-  gap: 20px 16px;
+  grid-template-rows: auto auto auto auto 37px;
+  gap: 16px 20px;
   margin-right: 20px;
   margin-bottom: 20px;
 }
