@@ -170,6 +170,10 @@ body {
   padding-left: 169px;
 }
 
+.navigation-item {
+  position: relative;
+}
+
 .navigation-link {
   display: block;
   padding: 20px 17px;
@@ -180,6 +184,24 @@ body {
   text-align:center;
   color: inherit;
   text-decoration: none;
+}
+
+.navigation-link-index::before {
+  position: absolute;
+  top: 66px;
+  width: 68px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
+.navigation-link-catalog::before {
+  position: absolute;
+  top: 67px;
+  width: 92px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
 }
 
 .navigation-user .navigation-item:nth-child(1) .navigation-link{
@@ -229,11 +251,12 @@ body {
 }
 
 .main-container {
+  position: relative;
   flex-grow: 1;
 }
 
 .promo {
-  height:485px;
+  min-height:485px;
   padding-top: 51px;
   box-sizing: border-box;
   background-color: #466887;
@@ -241,6 +264,19 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   text-align: center;
+
+}
+
+.promo::after {
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  top: 428px;
+  left: 0;
+  background-image: url("../images/promo-divider.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  content: "";
 }
 
 .advantages {
@@ -679,6 +715,51 @@ background-color: rgba(130, 179, 211, 1);
   list-style-type: none;
   min-width: 160px;
   height: 48px;
+}
+
+.view-type-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button-view-type {
+  display: block;
+  box-sizing: border-box;;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 17px 16px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+}
+
+.button-view-type:hover {
+  border-color: #000000;
+}
+
+.button-view-type:focus {
+  border-color: #68A2CA;
+}
+
+.button-view-type:active {
+  border-color: #000000;
+}
+
+.button-view-type-icons {
+  background-image: url(../images/icons/icon-table.svg);
+}
+
+.button-view-type-slideshow {
+  background-image: url(../images/icons/icon-slideshow.svg);
+}
+
+.button-view-type-list {
+  background-image: url(../images/icons/icon-list.svg);
+}
+
+.button-view-type-selected {
+  border-color: #000000;
 }
 
 .hotel-list {
