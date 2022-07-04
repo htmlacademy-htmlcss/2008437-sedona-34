@@ -772,13 +772,15 @@ background-color: rgba(130, 179, 211, 1);
 
 .catalog-filter-title {
   margin-bottom: 30px;
+  padding: 0;
+  text-align: left;
 }
 
 .catalog-filter-group:nth-child(3) .catalog-filter-title {
   margin-bottom: 34px;
 }
 
-.catalog-list-item {
+.catalog-list-item:not(:last-child) {
   margin-bottom: 15px;
 }
 
@@ -788,7 +790,6 @@ background-color: rgba(130, 179, 211, 1);
   padding-left: 40px;
 }
 
-/* Доработать состояния чекбоксов */
 .control-mark {
   position: absolute;
   top: 0;
@@ -875,7 +876,7 @@ background-color: rgba(130, 179, 211, 1);
   display: flex;
   box-sizing: border-box;
   width: 144px;
-  padding: 14px 0 11px 19px;
+  padding-left: 19px;
   margin: 0;
   font: inherit;
   text-align: left;
@@ -885,20 +886,38 @@ background-color: rgba(130, 179, 211, 1);
   border-radius: 4px 0 0 4px;
 }
 
-.catalog-filter-label +  .catalog-filter-label{
+.catalog-filter-label + .catalog-filter-label{
   border: 2px solid #FFFFFF;
   border-radius: 0 4px 4px 0;
   margin-left: -2px;
 }
 
-.catalog-filter-label-text {
-  padding-right: px;
-  color: rgba(255, 255, 255, 0.3)
+.catalog-filter-label:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-label:active {
+  background-color: #756257;
+  box-shadow: none;
+}
+
+.catalog-filter-label:focus-within .catalog-filter-label:active  {
+  background-color: #756257;
+  box-shadow: none;
+  outline: none;
+}
+
+.catalog-filter-label:focus-within  {
+  box-shadow: 0 0 0 3px #81B3D2, 0 0 0 3px #81B3D2 inset;
+  border-color: rgba(255, 255, 255);
+  outline: none;
 }
 
 .range-input {
-  width: 112px;
+  width: 100%;
+  height: 100%;
   font: inherit;
+  line-height: 23.31px;
   color: #FFFFFF;
   background-color: transparent;
   border: 0;
@@ -910,16 +929,28 @@ background-color: rgba(130, 179, 211, 1);
   margin-left: -2px;
 }
 
+.range-input:focus {
+  outline: none;
+}
+
+
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
+.range-input-text {
+  margin-right: 13px;
+  margin-top: 12px;
+  margin-bottom: 13px;
+  color: rgba(255, 255, 255, 0.3)
+}
+
 .range-scale {
   position: relative;
   height: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -966,6 +997,35 @@ background-color: rgba(130, 179, 211, 1);
 .catalog-filter-form-buttons-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: end;
+}
+
+.button-apply {
+  min-width: 160px;
+  padding: 14px 15px;
+  margin-bottom: 20px;
+}
+
+.button-reset {
+  font-weight: 400;
+  padding: 0;
+  background-color: transparent;
+  text-transform: none;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+
+.button-reset:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  background-color: transparent;
 }
 
 .catalog-search-result {
