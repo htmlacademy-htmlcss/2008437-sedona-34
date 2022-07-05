@@ -311,5 +311,32 @@
         </div>
       </footer>
     </div>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <section class="modal-content">
+          <div class="modal-form-header-wrapper">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+         </div>
+          <form class="modal-container-form" method="post">
+            <label class="modal-input-label" for="date-arrival">Дата Заезда:</label>
+            <input class="modal-input" id="date-arrival" type="datetime" placeholder="27 апреля 2020 года">
+            <p class="modal-input-comment">Мы не можем отправить вас в прошлое.</p>
+            <label class="modal-input-label" for="date-departure">Дата Выезда:</label>
+            <input class="modal-input" id="date-departure" type="datetime" placeholder="1 сентября 2021">
+            <p class="modal-input-comment">На эти даты есть свободные номера. Пока есть.</p>
+            <label class="modal-input-label" for="adults-number">Взрослые:</label>
+            <input class="modal-input" id="adults-number" type="number" placeholder="2">
+            <div class="modal-input-wrapper">
+              <label class="modal-input-label" for="children-number">Дети:</label>
+              <input class="modal-input" id="children-number" type="number" placeholder="1">
+            </div>
+            <button class="modal-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

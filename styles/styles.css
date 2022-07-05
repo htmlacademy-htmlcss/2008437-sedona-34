@@ -655,22 +655,144 @@ background-color: rgba(130, 179, 211, 1);
   z-index: 2;
 }
 
+.modal-container-close {
+  /* display: none; */
+}
+
 .modal {
   margin: auto;
   background-color: #FFFFFF;
-  padding-top: 54px 70px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
 }
 
 .modal-search {
+  box-sizing: border-box;
   width: 715px;
+  padding: 54px 70px;
+}
+
+.modal-form-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.modal-container-form {
+  width: 575px;
+  display: grid;
+  grid-template-columns: auto 36px auto 56px auto;
+  grid-template-rows: repeat(7, auto);
+
+}
+
+.modal-container-form .modal-input-label:first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.modal-container-form .modal-input:first-of-type {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+}
+
+.modal-container-form .modal-input-comment:first-of-type {
+  grid-column: 3/-1;
+  grid-row: 2/3;
+}
+
+.modal-container-form .modal-input-label:nth-of-type(2) {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.modal-container-form .modal-input:nth-of-type(2) {
+  grid-column: 3/-1;
+  grid-row: 3/4;
+}
+
+.modal-container-form .modal-input-comment:nth-of-type(2) {
+  grid-column: 3/-1;
+  grid-row: 4/5;
+}
+
+.modal-container-form .modal-input-label:nth-of-type(3) {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+.modal-container-form .modal-input:nth-of-type(3) {
+  grid-column: 3/4;
+  grid-row: 5/6;
+}
+
+.modal-input-wrapper {
+  grid-column: 5/-1;
+  grid-row: 5/6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-container-form .modal-form-button {
+  grid-column: 1/-1;
+  grid-row: 7/8;
+}
+
+.modal-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.modal-close-button {
+  position: relative;
+  width: 53px;
+  height: 53px;
+  padding: 0;
+  border-radius: 50%;
+  background: #F2F2F2;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-button:before {
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  width: 13px;
+  height: 1px;
+  background-color: #000000;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.modal-close-button:after {
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  width: 13px;
+  height: 1px;
+  background-color: #000000;
+  content: "";
+  transform: rotate(-45deg);
+}
+
+.modal-input-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: capitalize;
 }
 
 /* CATALOG PAGE */
 .header-catalog-wrapper {
-  box-sizing: border-box;
-  padding: 38px 0 70px;
+  padding-top: 38px;
+  padding-bottom: 69px;
   background-color: #466887;
   background-image: url("../images/catalog/catalog-background.jpg");
   background-repeat: no-repeat;
@@ -746,6 +868,14 @@ background-color: rgba(130, 179, 211, 1);
   background-position: center center;
 }
 
+.breadcrumbs-item:first-child .breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-item:first-child .breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
 .breadcrumbs-item::after {
   display: block;
   position: absolute;
@@ -770,6 +900,14 @@ background-color: rgba(130, 179, 211, 1);
   text-decoration: none;
 }
 
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .catalog-filter-form {
   display: flex;
   justify-content: space-between;
@@ -777,6 +915,7 @@ background-color: rgba(130, 179, 211, 1);
 
 .catalog-filter-wrapper {
   display: flex;
+
 }
 
 .catalog-filter-wrapper .catalog-filter-group:first-child {
@@ -1027,12 +1166,15 @@ background-color: rgba(130, 179, 211, 1);
 .button-apply {
   min-width: 160px;
   padding: 14px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .button-reset {
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: -6px;
   font-weight: 400;
-  padding: 0;
+  padding: 6px 0;
   background-color: transparent;
   text-transform: none;
 }
@@ -1042,8 +1184,8 @@ background-color: rgba(130, 179, 211, 1);
   background-color: transparent;
 }
 
-.button-reset:hover {
-  color: rgba(255, 255, 255, 0.6);
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
