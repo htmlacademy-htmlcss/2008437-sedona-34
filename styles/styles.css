@@ -664,6 +664,7 @@ background-color: rgba(130, 179, 211, 1);
   background-color: #FFFFFF;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  min-height: 561px;
 }
 
 .modal-search {
@@ -683,6 +684,7 @@ background-color: rgba(130, 179, 211, 1);
   width: 700px;
   display: flex;
   flex-direction: column;
+  justify-content: start;
 }
 
 .modal-field-group {
@@ -773,10 +775,10 @@ background-color: rgba(130, 179, 211, 1);
 
 .modal-close-button:before {
   position: absolute;
-  top: 26px;
-  left: 20px;
-  width: 13px;
-  height: 1px;
+  top: 25px;
+  left: 18px;
+  width: 17px;
+  height: 2px;
   background-color: #000000;
   content: "";
   transform: rotate(45deg);
@@ -784,10 +786,10 @@ background-color: rgba(130, 179, 211, 1);
 
 .modal-close-button:after {
   position: absolute;
-  top: 26px;
-  left: 20px;
-  width: 13px;
-  height: 1px;
+  top: 25px;
+  left: 18px;
+  width: 17px;
+  height: 2px;
   background-color: #000000;
   content: "";
   transform: rotate(-45deg);
@@ -898,6 +900,94 @@ background-color: rgba(130, 179, 211, 1);
   padding-top: 9px;
   height: 29px;
   color: #333333;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.tooltip-toggle {
+  position: absolute;
+  top: 14px;
+  left: 52px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #83B3D3;
+  border: 0;
+}
+
+.tooltip-toggle:before {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  background-color: #FFFFFF;
+  content: "";
+}
+
+.tooltip-toggle:after {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 6px;
+  height: 1px;
+  background-color: #FFFFFF;
+  transform: rotate(-90deg);
+  content: "";
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  fill: #FFFFFF;
+  display: block;
+}
+
+.tooltip-toggle:hover {
+  background-color: #68A2CA;
+}
+
+.tooltip-toggle:active {
+  background-color: #68A2CA;
+}
+
+.modal-form-tooltip-text {
+  box-sizing: border-box;
+  background: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  width: 256px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 100%;
+  margin-bottom: 6px;
+  left: 50%;
+  transform: translateX(-67%);
+  z-index: 1;
+  display: none;
+}
+
+.modal-form-tooltip-text:after {
+  content:'';
+  background-image: url("../images/icons/icon-tooltip-triangle.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .modal-form-tooltip-text,
+.tooltip-toggle:focus + .modal-form-tooltip-text{
+  display: block;
 }
 
 .modal-input-comment-error {
@@ -909,6 +999,7 @@ background-color: rgba(130, 179, 211, 1);
   width: 575px;
   min-height:60px;
   margin-top: 40px;
+  border-radius: 10px;
 }
 
 .modal-input::placeholder {
