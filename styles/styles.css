@@ -651,7 +651,7 @@ background-color: rgba(130, 179, 211, 1);
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(242, 242, 242, 0.8);
   z-index: 2;
 }
 
@@ -681,63 +681,74 @@ background-color: rgba(130, 179, 211, 1);
 
 .modal-container-form {
   width: 700px;
-  display: grid;
-  grid-template-columns: 120px 36px 133px 56px 230px;
-  grid-template-rows: repeat(7, auto);
-  align-items: center;
-}
-
-.modal-input-label:first-of-type {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.modal-input:first-of-type {
-  grid-column: 3 / -1;
-  grid-row: 1 / 2;
-}
-
-.modal-input-comment:nth-of-type(4) {
-  grid-column: 3/-1;
-  grid-row: 2/3;
-}
-
-.modal-container-form .modal-input-label:nth-of-type(3) {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-
-.modal-container-form .modal-input:nth-of-type(2) {
-  grid-column: 3/-1;
-  grid-row: 3/4;
-}
-
-.modal-container-form .modal-input-comment:nth-of-type(2) {
-  grid-column: 3/-1;
-  grid-row: 4/5;
-}
-
-.modal-container-form .modal-input-label:nth-of-type(5) {
-  grid-column: 1/2;
-  grid-row: 5/6;
-}
-
-.modal-container-form .modal-input:nth-of-type(3) {
-  grid-column: 3/4;
-  grid-row: 5/6;
-}
-
-.modal-input-wrapper {
-  grid-column: 5/-1;
-  grid-row: 5/6;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.modal-field-group {
+  display: grid;
+  width: 575px;
+  grid-template-columns: 120px 36px auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.modal-field-group .modal-input-label {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.modal-field-group .modal-input {
+  grid-column: 3 / -1;
+  grid-row: 1 / span 1;
+}
+
+.modal-field-group .modal-input-comment {
+  grid-column: 3 / -1;
+  grid-row: 2 / span 1;
+}
+
+.modal-field-group-guests {
+  display: flex;
+  position: relative;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+}
+
+.modal-field-group-guests .modal-input-label {
+  width: 120px;
+  margin-right: 36px;
+}
+
+.modal-field-group-guests .modal-input-button-wrapper {
+  position: relative;
+  width: 133px;
+  margin-right: 56px;
+}
+
+.modal-field-group-guests .modal-input-button-wrapper:last-child {
+  margin-right: 0;
+}
+
+.modal-field-group-guests .modal-input {
+  width: 133px;
+}
+
+.modal-field-group-guests .modal-input-wrapper {
+  width: 230px;
+  display: flex;
   align-items: center;
 }
 
-.modal-container-form .modal-form-button {
-  grid-column: 1/-1;
-  grid-row: 7/8;
+.modal-input-wrapper .modal-input-label {
+  width: 79px;
+}
+
+.modal-input-wrapper .modal-input {
+  width: 133px;
 }
 
 .modal-title {
@@ -789,7 +800,13 @@ background-color: rgba(130, 179, 211, 1);
   text-transform: capitalize;
 }
 
+.modal-input-wrapper {
+  position: relative;
+  width: 133px;
+}
+
 .modal-input {
+  box-sizing:border-box;
   padding: 0;
   padding-top: 15px;
   padding-left: 19px;
@@ -798,6 +815,72 @@ background-color: rgba(130, 179, 211, 1);
   border: none;
   background: #F2F2F2;
   border-radius: 4px;
+  appearance: textfield;
+}
+
+.modal-input-minus-button {
+  position: absolute;
+  padding: 13px;
+  top: 13px;
+  left: 19px;
+  background-color: transparent;
+  border: none;
+  cursor:pointer;
+}
+
+.modal-input-minus-button::after {
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.3;
+  border: none;
+  content: "";
+}
+
+.modal-input-plus-button {
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  top: 26px;
+  right: 19px;
+  background: transparent;
+  border: none;
+}
+
+.modal-input-plus-button::before {
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  transform: rotate(90deg);
+  content: "";
+}
+
+.modal-input-plus-button::after {
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  content: "";
+}
+
+.modal-input-quantity {
+  padding-left: 61px;
+}
+
+.modal-field-group .modal-input {
+  background-image: url("../images/icons/icon-date.svg");
+  background-repeat: no-repeat;
+  background-position: top 18px right 19px;
+  background-size: auto;
 }
 
 .modal-input:nth-of-type(1), .modal-input:nth-of-type(2) {
@@ -807,15 +890,14 @@ background-color: rgba(130, 179, 211, 1);
 .modal-input[type="number"]:nth-of-type(3),
 .modal-input-wrapper .modal-input[type="number"] {
   width: 133px;
-  appearance: textfield;
 }
 
 .modal-input-comment {
   box-sizing: border-box;
   margin: 0;
-  margin-bottom:11px;
   padding-top: 9px;
   height: 29px;
+  color: #333333;
 }
 
 .modal-input-comment-error {
@@ -823,6 +905,9 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .modal-form-button {
+  box-sizing: border-box;
+  width: 575px;
+  min-height:60px;
   margin-top: 40px;
 }
 

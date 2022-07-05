@@ -321,21 +321,34 @@
             </button>
          </div>
           <form class="modal-container-form" method="post">
-            <label class="modal-input-label" for="date-arrival">Дата Заезда:</label>
-            <input class="modal-input" id="date-arrival" type="text" placeholder="27 апреля 2020 года" onfocus="(this.type='date')">
-            <label class="modal-input-comment modal-input-comment-error">Мы не можем отправить вас в прошлое.</label>
-            <label class="modal-input-label" for="date-departure">Дата Выезда:</label>
-            <input class="modal-input" id="date-departure" type="text" placeholder="1 сентября 2021" onfocus="(this.type='date')">
-            <label class="modal-input-comment">На эти даты есть свободные номера. Пока есть.</label>
-            <label class="modal-input-label" for="adults-number">Взрослые:</label>
-            <input class="modal-input" id="adults-number" type="number" placeholder="2">
-            <div class="modal-input-wrapper">
-              <label class="modal-input-label" for="children-number">
-                Дети:
-                <span class=modal-form-tooltip></span>
-                <span class="visually-hidden">Всплывающая подсказка</span>
-              </label>
-              <input class="modal-input" id="children-number" type="number" placeholder="1">
+            <p class="modal-field-group">
+              <label class="modal-input-label" for="date-arrival">Дата Заезда:</label>
+              <input class="modal-input" id="date-arrival" type="text" placeholder="27 апреля 2020 года" onfocus="(this.type='date')">
+              <span class="modal-input-comment modal-input-comment-error">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="modal-field-group">
+              <label class="modal-input-label" for="date-departure">Дата Выезда:</label>
+              <input class="modal-input" id="date-departure" type="text" placeholder="1 сентября 2021" onfocus="(this.type='date')">
+              <span class="modal-input-comment">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="modal-field-group-guests">
+              <label class="modal-input-label" for="adults-number">Взрослые:</label>
+              <div class="modal-input-button-wrapper">
+                <button class="modal-input-minus-button"><span class="visually-hidden">Уменьшить</span></button>
+                <input class="modal-input modal-input-quantity" id="adults-number" type="number" placeholder="2">
+                <button class="modal-input-plus-button"><span class="visually-hidden">Увеличить</span></button>
+              </div>
+              <div class="modal-input-wrapper">
+                <label class="modal-input-label" for="children-number">Дети:
+                  <span class=modal-form-tooltip></span>
+                  <span class="visually-hidden">Всплывающая подсказка</span>
+                </label>
+                <div class="modal-input-button-wrapper">
+                  <button class="modal-input-minus-button"><span class="visually-hidden">Уменьшить</span></button>
+                  <input class="modal-input modal-input-quantity" id="children-number" type="number" placeholder="1">
+                  <button class="modal-input-plus-button"><span class="visually-hidden">Увеличить</span></button>
+                </div>
+              </div>
             </div>
             <button class="modal-form-button button button-big button-blue" type="submit">Найти</button>
           </form>
