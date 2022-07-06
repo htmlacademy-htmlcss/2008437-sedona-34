@@ -795,6 +795,29 @@ background-color: rgba(130, 179, 211, 1);
   transform: rotate(-45deg);
 }
 
+.modal-close-button:focus-visible {
+  background-color: #E6E6E6;
+  outline: solid 3px #83B3D3;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+  outline: none;
+}
+
+.modal-close-button:active  {
+  background-color: #E6E6E6;
+  outline: none;
+}
+
+.modal-close-button:active:before  {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-button:active:after  {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .modal-input-label {
   font-weight: 700;
   font-size: 20px;
@@ -814,15 +837,37 @@ background-color: rgba(130, 179, 211, 1);
   padding-left: 19px;
   padding-bottom: 14px;
   font: inherit;
+  color: #000000;
   border: none;
   background: #F2F2F2;
   border-radius: 4px;
   appearance: textfield;
 }
 
+.modal-input[type="text"]::placeholder {
+  color:rgba(0, 0, 0, 0.6);
+}
+
+.modal-input:hover {
+  background: #E6E6E6;
+}
+
+.modal-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-input:active {
+  outline: none;
+  box-shadow: 0 0 0 3px #000000 inset;
+  color: #000000;
+}
+
 .modal-input-minus-button {
   position: absolute;
-  padding: 13px;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  padding: 12px 6px;
   top: 13px;
   left: 19px;
   background-color: transparent;
@@ -834,30 +879,50 @@ background-color: rgba(130, 179, 211, 1);
   position: absolute;
   width: 13px;
   height: 1px;
-  left: 0;
+  left: 6px;
+  top: 12px;
   background-color: #000000;
   opacity: 0.3;
   border: none;
   content: "";
 }
 
+.modal-input-minus-button:hover::after {
+  opacity: 1;
+}
+
+.modal-input-minus-button:focus {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #83B3D3 inset;
+  outline: none;
+  border-radius: 4px;
+}
+
+.modal-input-minus-button:hover::after {
+  opacity: 0.2;
+}
+
 .modal-input-plus-button {
   position: absolute;
-  width: 13px;
-  height: 1px;
-  top: 26px;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  padding: 12px 6px;
+  top: 13px;
   right: 19px;
-  background: transparent;
+  background-color: transparent;
   border: none;
+  cursor:pointer;
 }
 
 .modal-input-plus-button::before {
   position: absolute;
   width: 13px;
   height: 1px;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  top: 12px;
+  right: 6px;
+  background-color: #000000;
+  opacity: 0.3;
   border: none;
   transform: rotate(90deg);
   content: "";
@@ -867,15 +932,49 @@ background-color: rgba(130, 179, 211, 1);
   position: absolute;
   width: 13px;
   height: 1px;
-  right: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  left: 6px;
+  top: 12px;
+  background-color: #000000;
+  opacity: 0.3;
   border: none;
   content: "";
 }
 
-.modal-input-quantity {
-  padding-left: 61px;
+.modal-input-plus-button:hover::before {
+  opacity: 1;
+}
+
+.modal-input-plus-button:hover::after {
+  opacity: 1;
+}
+
+.modal-input-plus-button:focus {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #83B3D3 inset;
+  outline: none;
+  border-radius: 4px;
+}
+
+.modal-input-plus-button:active::before {
+  opacity: 0.2;
+}
+
+.modal-input-plus-button:active::after {
+  opacity: 0.2;
+}
+
+.modal-input-quantity[type="number"] {
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: center;
+  appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .modal-field-group .modal-input {
@@ -956,18 +1055,17 @@ background-color: rgba(130, 179, 211, 1);
   background: #333333;
   color: #ffffff;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 21px;
   font-weight: normal;
   text-transform: none;
-  padding: 15px 18px 18px 22px;
+  padding: 17px 18px 21px 22px;
   border-radius: 10px;
   width: 256px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 100%;
+  top: 54px;
   margin-bottom: 6px;
-  left: 50%;
-  transform: translateX(-67%);
+  right: 37px;
   z-index: 1;
   display: none;
 }
@@ -1005,6 +1103,10 @@ background-color: rgba(130, 179, 211, 1);
 .modal-input::placeholder {
   color: #000000;
   opacity: 1;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 
 /* CATALOG PAGE */
