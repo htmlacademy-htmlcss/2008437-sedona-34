@@ -206,13 +206,13 @@ body {
   z-index: 1;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link{
+.navigation-item:nth-child(1) .navigation-user-link{
   padding: 23px 11px 24px 11px;
   line-height: 0;
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link{
-  padding: 22px 12px 22px 12px;
+.navigation-item:nth-child(2) .navigation-user-link{
+  padding: 22px 12px 24px 12px;
   line-height: 0;
 }
 
