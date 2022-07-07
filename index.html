@@ -130,8 +130,11 @@
         <section class="subscription">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <form class="subscription-form" method="post">
-            <input class="subscription-form-field" type="email" placeholder="Ваш e-mail">
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="subscription-form-label" for="subscription-form">
+              <span class="visually-hidden">Ваш e-mail</span>
+              <input class="subscription-form-field" id="subscription-form" type="email" placeholder="Ваш e-mail">
+            </label>
             <button class="button button-big button-blue button-subscribe" type="submit">Подписаться</button>
           </form>
         </section>
@@ -194,15 +197,15 @@
               <span class="visually-hidden">Закрыть</span>
             </button>
          </div>
-          <form class="modal-container-form" method="post">
+          <form class="modal-container-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="modal-field-group">
               <label class="modal-input-label" for="date-arrival">Дата Заезда:</label>
-              <input class="modal-input" id="date-arrival" type="text" placeholder="Укажите дату" onfocus="(this.type='date')">
+              <input class="modal-input" id="date-arrival" type="text" placeholder="27 апреля 2020" onfocus="(this.type='date')">
               <span class="modal-input-comment modal-input-comment-error">Мы не можем отправить вас в прошлое.</span>
             </p>
             <p class="modal-field-group">
               <label class="modal-input-label" for="date-departure">Дата Выезда:</label>
-              <input class="modal-input" id="date-departure" type="text" placeholder="Укажите дату" onfocus="(this.type='date')">
+              <input class="modal-input" id="date-departure" type="text" placeholder="1 сентября 2021" onfocus="(this.type='date')">
               <span class="modal-input-comment">На эти даты есть свободные номера. Пока есть.</span>
             </p>
             <div class="modal-field-group-guests">
