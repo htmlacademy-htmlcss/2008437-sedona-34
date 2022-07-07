@@ -662,7 +662,7 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .modal-container-close {
-  display: none;
+  /* display: none; */
 }
 
 .modal {
