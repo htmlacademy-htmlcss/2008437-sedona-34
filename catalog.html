@@ -134,10 +134,10 @@
                     </div>
                     <div class="range-scale">
                       <div class="range-bar" style="left: -1px; width: 226px">
-                        <button class="range-toggle toggle-min">
+                        <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
-                        <button class="range-toggle toggle-max">
+                        <button class="range-toggle toggle-max" type="button">
                           <span class="visually-hidden">Изменить максимальную цену.</span>
                         </button>
                       </div>
@@ -259,8 +259,11 @@
         <section class="subscription-catalog">
           <h2 class="subscription-catalog-title">Подпишитесь на рассылку</h2>
           <p class="subscription-catalog-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <form class="subscription-form">
-            <input class="subscription-form-field" type="email" placeholder="Ваш e-mail">
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="POST">
+            <label class="subscription-form-label" for="subscription-form">
+              <span class="visually-hidden">Ваш e-mail</span>
+              <input class="subscription-form-field" id="subscription-form" type="email" name="e-mail" placeholder="Ваш e-mail">
+            </label>
             <button class="button button-big button-blue button-subscribe" type="submit">Подписаться</button>
           </form>
         </section>
