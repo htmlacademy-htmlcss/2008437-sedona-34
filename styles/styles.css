@@ -1556,7 +1556,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .sort-order-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 1057px;
   margin: 0 auto;
   margin-bottom: 56px;
@@ -1763,7 +1763,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   align-items: center;
   width: 1056px;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .pagination {
@@ -1774,6 +1774,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   list-style-type: none;
 }
 
+ .pagination-item {
+  margin-bottom: 5px;
+}
+
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -1782,8 +1786,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: block;
   box-sizing: border-box;
   text-decoration: none;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 12px 24px;
   line-height: 36px;
   font-weight: 700;
