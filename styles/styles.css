@@ -160,10 +160,12 @@ body {
 
 .navigation-list {
   display: flex;
+  max-width:500px;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style-type: none;
+
 }
 
 .page-header-logo-link + .navigation-list {
@@ -206,13 +208,19 @@ body {
   z-index: 1;
 }
 
-.navigation-item:nth-child(1) .navigation-user-link{
+.navigation-item .navigation-user-link{
+  box-sizing: border-box;
+  width: 42px;
+  height: 66px;
   padding: 23px 11px 24px 11px;
   line-height: 0;
 }
 
-.navigation-item:nth-child(2) .navigation-user-link{
-  padding: 22px 12px 24px 12px;
+.navigation-user-link-favorites {
+  box-sizing: border-box;
+  width: 42px;
+  height: 66px;
+  padding: 24px 11px 24px 11px;
   line-height: 0;
 }
 
@@ -231,16 +239,18 @@ body {
 .navigation-link-icon:active {
   fill: rgba(117, 97, 87, 0.3);
 }
-.navigation-user .navigation-item:nth-child(2) {
-  margin-right: 20px;
+.navigation-user .navigation-item:last-child {
+  margin-left: 20px;
 }
 
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 265px;
+  min-width: 264px;
+  max-width: 350px;
   margin-left: auto;
+  align-self: flex-start;
 }
 
 .count-badge {
@@ -249,7 +259,7 @@ body {
   box-sizing: border-box;
   width: 20px;
   height: 20px;
-  top: 13px;
+  top: 15px;
   left: 24px;
   font-size: 10px;
   line-height: 13px;
@@ -663,7 +673,7 @@ background-color: rgba(130, 179, 211, 1);
 }
 
 .modal-container-close {
-  display: none;
+  /* display: none; */
 }
 
 .modal {
@@ -847,7 +857,7 @@ background-color: rgba(130, 179, 211, 1);
   font: inherit;
   color: #000000;
   border: none;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   border-radius: 4px;
   appearance: textfield;
 }
@@ -877,6 +887,7 @@ background-color: rgba(130, 179, 211, 1);
   outline: none;
   box-shadow: 0 0 0 3px #000000 inset;
   color: #000000;
+  background-color: #FFFFFF;
 }
 
 .modal-input-minus-button {
