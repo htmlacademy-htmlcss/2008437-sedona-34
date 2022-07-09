@@ -322,26 +322,14 @@ body {
     no-repeat,
     no-repeat;
   background-size:
-    top,
-    1200px 57px;
+    1200px 57px,
+    cover;
   background-position:
       bottom,
       center;
   text-align: center;
 }
 
-/* .promo::after {
-  position: absolute;
-  width: 1200px;
-  height: 57px;
-  top: 428px;
-  left: 0;
-  background-image: url("../images/promo-divider.svg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  content: "";
-}
-*/
 .advantages {
   padding-top: 63px;
   margin: 0 auto;
