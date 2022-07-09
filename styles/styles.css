@@ -322,8 +322,8 @@ body {
     no-repeat,
     no-repeat;
   background-size:
-    top,
-    1200px 57px;
+    1200px 57px,
+    cover;
   background-position:
       bottom,
       center;
