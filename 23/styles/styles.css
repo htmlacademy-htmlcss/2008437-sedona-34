@@ -315,13 +315,22 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #466887;
-  background-image: url("../images/promo-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-image:
+    url("../images/promo-divider.svg"),
+    url("../images/promo-background.jpg");
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-size:
+    top,
+    1200px 57px;
+  background-position:
+      bottom,
+      center;
   text-align: center;
 }
 
-.promo::after {
+/* .promo::after {
   position: absolute;
   width: 1200px;
   height: 57px;
@@ -332,7 +341,7 @@ body {
   background-size: 100% auto;
   content: "";
 }
-
+*/
 .advantages {
   padding-top: 63px;
   margin: 0 auto;
